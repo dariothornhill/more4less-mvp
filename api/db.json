@@ -1,0 +1,85 @@
+{
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "productId": 1,
+            "userId": 1,
+            "date": 123455555
+        },
+        {
+            "id": 2,
+            "body": "another comment",
+            "productId": 1
+        }
+    ],
+    "products": [
+        {
+            "id":1,
+            "title": "Shoes",
+            "base_price": 29.99,
+            "currency": "BBD",
+            "description": "Not nike",
+            "image": {
+                "src": "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
+            }
+        },
+        {
+            "id":2,
+            "title": "Onions",
+            "base_price": 29.99,
+            "currency": "BBD",
+            "description": "Makes you cry",
+            "image": {
+                "src": "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
+            }
+        },
+        {
+            "id":3,
+            "title": "Cucumbers",
+            "base_price": 29.99,
+            "currency": "BBD",
+            "description": "A tasteless melon",
+            "image": {
+                "src": "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
+            }
+        }
+    ],
+    "customers": [
+        {}
+    ],
+    "sellers": [
+        {}
+    ],
+    "drops": [
+        {
+            "productId": 1,
+            "start_date": 18000000,
+            "end_date": 18003600,
+            "discounts": {
+                "10": 0.9,
+                "20": 0.85,
+                "30": 0.8,
+                "60": 0.7,
+                "120": 0.6
+            },
+            "quantity": 120
+        }
+    ],
+    "purchases": [
+        {
+            "customerId": 1,
+            "dropId": 1,
+            "quantity": 12
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "vegetables",
+            "image": {
+                "src": "/categories/cat_1.png"
+            }
+        }
+    ]
+}

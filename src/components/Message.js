@@ -1,0 +1,1 @@
+export default (props) => (<span>{props.msg}</span>);
