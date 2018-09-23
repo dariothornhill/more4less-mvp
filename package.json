@@ -9,7 +9,7 @@
     "start": "parcel public/index.html",
     "build": "parcel build public/index.html",
     "test": "jest --watch",
-    "serve": "json-server --watch db.json -p 3030 -H 172.16.0.13 -H localhost"
+    "server": "json-server --watch api/db.json -p 3030 -H localhost"
   },
   "dependencies": {
     "actions": "^1.3.0",
@@ -30,6 +30,7 @@
     "rxjs-compat": "^6.3.2"
   },
   "devDependencies": {
+    "json-server": "^0.14.0",
     "node-sass": "^4.9.3",
     "parcel-bundler": "^1.9.7",
     "redux-devtools-extension": "^2.13.5"
