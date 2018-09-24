@@ -42,7 +42,7 @@ class App extends Component {
   render() {
     const { user, loading, error } = this.state;
     return (
-      <div className="container-fluid" loading={loading} error={error}>
+      <div className="container-fluid" loading={loading ? 'true' : 'false'} error={error}>
         {user ? <Products logout={this.logout}/> : <Login />}
       </div>
     );
