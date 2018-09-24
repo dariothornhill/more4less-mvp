@@ -1,11 +1,48 @@
 const express = require('express');
 const app = express();
 
+//test data
+const products = [
+    {
+        "id":1,
+        "title": "Shoes",
+        "base_price": 29.99,
+        "currency": "BBD",
+        "description": "Not nike",
+        "image": {
+            "src": "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
+        }
+    },
+    {
+        "id":2,
+        "title": "Onions",
+        "base_price": 29.99,
+        "currency": "BBD",
+        "description": "Makes you cry",
+        "image": {
+            "src": "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
+        }
+    },
+    {
+        "id":3,
+        "title": "Cucumbers",
+        "base_price": 29.99,
+        "currency": "BBD",
+        "description": "A tasteless melon",
+        "image": {
+            "src": "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
+        }
+    }
+];
+
 //--products
 
 app.get('/products', (req, res) => {
 
-    const message = "get all";
+    const message = "get all products";
+
+    
+
     res.status(200).send({message});
 });
 
