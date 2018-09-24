@@ -1,5 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/auth";
+import "firebase/firestore"
 const config = {
     apiKey: "AIzaSyChswt_LVNufO_cvl2_13fvPHyikGB7n2c",
     authDomain: "price-drop-app.firebaseapp.com",
