@@ -1,9 +1,9 @@
 import React from "react";
-import fire from "../config/fire";
+import { connect } from "react-redux";
+import {bindActionCreators } from 'redux';
+import { userLogin } from "../actions";
 import { Label, Button, Input, Form, FormGroup, Col } from "reactstrap";
 import Message from "../components/Message";
-//import "./login.css";
-import logo from "../logo.svg";
 
 class Login extends React.Component {
   constructor(props) {
@@ -23,9 +23,8 @@ class Login extends React.Component {
   login(e) {
     e.preventDefault();
     this.setState({ loading: true });
-    fire
-      .auth()
-      .signInWithEmailAndPassword(this.state.email, this.state.password)
+    const {userLogin} = this.props.actions;
+    userLogin(this.state.email, this.state.password)
       .then(user => {
         this.setState({ loading: false });
         console.log(user);
@@ -50,10 +49,7 @@ class Login extends React.Component {
     const { email, password, loading } = this.state;
     return (
         <Form className="login-form" onSubmit={this.login}>
-          <div className="logo-container">
-            <img src={logo} className="logo" alt="logo" />
-          </div>
-          <h2 className="form-header">Welcome To The CSX Dashboard</h2>
+          <h2 className="form-header">More4Less</h2>
           {this.renderError()}
           <FormGroup row>
             <Label sm={2} for="email">
@@ -95,4 +91,12 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+function  mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators({
+      userLogin
+    }, dispatch)
+  };
+}
+
+export default connect(null, mapDispatchToProps)(Login);

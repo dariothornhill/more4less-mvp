@@ -1,3 +1,5 @@
+import fire from "../config/fire";
+
 export const ping = () => ({ type: 'PING' });
 export const requestProducts = () => ({type: "REQUEST_PRODUCTS"});
 export const receiveProducts = products => ({type: "RECEIVE_PRODUCTS", products});
@@ -22,3 +24,10 @@ export const fetchCategories = () => dispatch => {
         dispatch(receiveCategories([]));
     })
 };
+export const requestLogin = () => ({type: "REQUEST_LOGIN"});
+export const userLogin = (email, password) => dispatch => {
+    dispatch(requestLogin());
+    return fire
+    .auth()
+    .signInWithEmailAndPassword(email, password);
+}

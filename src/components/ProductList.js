@@ -14,7 +14,7 @@ class ProductList extends React.Component {
       />
     ));
 
-    return <div>{list}</div>;
+    return <div className="row">{list}</div>;
   }
 }
 const mapStateToProps = state => {

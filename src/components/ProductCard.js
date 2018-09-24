@@ -1,13 +1,15 @@
+import React from 'react';
+import { connect } from 'react-redux';
+
 import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
 } from 'reactstrap';
-import React from 'react';
-import { connect } from 'react-redux';
 
 class ProductCard extends React.Component {
     render() {
-        return <Card className="w-25">
+        return <div className="col">
+            <Card className="row padding">
             <CardImg top width="100%" src={this.props.image.src} alt={this.props.image.src || "no image"} />
             <CardBody>
                 <CardTitle>{this.props.title}</CardTitle>
@@ -16,6 +18,7 @@ class ProductCard extends React.Component {
                 <Button>Button</Button>
             </CardBody>
         </Card>
+        </div>
     }
 }
 const mapStateToProps = state => ({
