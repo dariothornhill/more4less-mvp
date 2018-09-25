@@ -20,9 +20,8 @@
             "base_price": 29.99,
             "currency": "BBD",
             "description": "Not nike",
-            "image": {
-                "src": "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
-            }
+            "image":  "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
+            
         },
         {
             "id":2,
@@ -30,9 +29,8 @@
             "base_price": 29.99,
             "currency": "BBD",
             "description": "Makes you cry",
-            "image": {
-                "src": "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
-            }
+            "image": "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
+            
         },
         {
             "id":3,
@@ -40,20 +38,42 @@
             "base_price": 29.99,
             "currency": "BBD",
             "description": "A tasteless melon",
-            "image": {
-                "src": "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
-            }
+            "image":  "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
+            
         }
     ],
-    "customers": [
-        {}
-    ],
-    "sellers": [
-        {}
-    ],
-    "drops": [
+    "deals": [
         {
+            "id": 1,
             "productId": 1,
+            "start_date": 18000000,
+            "end_date": 18003600,
+            "discounts": {
+                "10": 0.9,
+                "20": 0.85,
+                "30": 0.8,
+                "60": 0.7,
+                "120": 0.6
+            },
+            "quantity": 120
+        },
+        {
+            "id": 2,
+            "productId": 3,
+            "start_date": 18000000,
+            "end_date": 18003600,
+            "discounts": {
+                "10": 0.9,
+                "20": 0.85,
+                "30": 0.8,
+                "60": 0.7,
+                "120": 0.6
+            },
+            "quantity": 120
+        },
+        {
+            "id": 3,
+            "productId": 2,
             "start_date": 18000000,
             "end_date": 18003600,
             "discounts": {
@@ -73,13 +93,10 @@
             "quantity": 12
         }
     ],
-    "categories": [
-        {
-            "id": 1,
-            "name": "vegetables",
-            "image": {
-                "src": "/categories/cat_1.png"
-            }
-        }
+    "customers": [
+        {}
+    ],
+    "sellers": [
+        {}
     ]
 }

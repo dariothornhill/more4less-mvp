@@ -1,9 +1,11 @@
 // actions.js
-import { createActions } from "reduxsauce";
+import { createActions } from 'reduxsauce';
 
 const { Creators, Types } = createActions({
-  requestProducts: ["products"],
-  receiveProducts: ["products"]
+  requestDeals: ['deals'],
+  receiveDeals: ['deals'],
+  requestProduct: ['productId'],
+  receiveProduct: ['product'],
 });
 
 export { Creators, Types };

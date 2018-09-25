@@ -1,14 +1,14 @@
-import React from "react";
-import { connect } from "react-redux";
+
+import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { userLogin } from "../../actions";
-import LoginComponent from "./LoginComponent";
+import { userLogin } from '../../actions/users';
+import LoginComponent from './LoginComponent';
 
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators({
-      userLogin
-    }, dispatch)
+      userLogin,
+    }, dispatch),
   };
 }
 

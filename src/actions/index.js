@@ -1,5 +1,4 @@
-import categories from './categories';
-import products from './products';
+
 import users from './users';
 
-export default { categories, products, users };
+export default { users };

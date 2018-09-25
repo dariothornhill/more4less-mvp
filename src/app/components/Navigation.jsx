@@ -1,4 +1,4 @@
-import React from 'react';
+simport React from 'react';
 import { connect } from 'react-redux';
 
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
