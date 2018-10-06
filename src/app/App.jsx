@@ -6,6 +6,7 @@ import fire from '../config/fire';
 import Deals from './deals/DealsContainer';
 import Account from './account/AccountComponent';
 import Login from './account/LoginContainer';
+import Logout from './account/LogoutContainer';
 
 
 class App extends Component {
@@ -47,15 +48,19 @@ class App extends Component {
     const { user, loading, error } = this.state;
 
     return (
-      <Router>
-        <Switch>
-          <Route exact path="/" component={(user) ? Account : Login} />
-          <Route exact path="/deals" component={Deals} />
-          <Route exact path="/account" component={Account} /> 
-        </Switch>
-      </Router>
+      <React.Fragment>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={(user) ? Account : Login} />
+            <Route exact path="/deals" component={Deals} />
+            <Route exact path="/my-account" component={Account} />
+            <Route exact path="/logout" component={Logout} />
+          </Switch>
+        </Router>
+      </React.Fragment>
     );
   }
 }
 
 export default connect(null)(App);
+

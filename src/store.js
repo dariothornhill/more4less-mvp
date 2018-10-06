@@ -3,7 +3,7 @@ import { createEpicMiddleware, combineEpics } from 'redux-observable';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import thunk from 'redux-thunk';
-import { pingEpic } from './epics';
+import pingEpic from './epics';
 import dealsReducer, { dealEpic } from './app/deals/duck';
 
 const epicMiddleware = createEpicMiddleware();
@@ -13,7 +13,7 @@ export default function configureStore() {
     applyMiddleware(epicMiddleware, thunk),
   ));
 
-  epicMiddleware.run(combineEpics( pingEpic, dealEpic ));
+  epicMiddleware.run(combineEpics(pingEpic, dealEpic));
 
   return store;
 }

@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import DealList from '../components/DealList';
+import DealList from "../components/DealList";
+import Navigation from "../components/Navigation";
 
 class Deals extends Component {
   componentWillMount() {
@@ -10,9 +11,13 @@ class Deals extends Component {
   }
 
   render() {
-    return <DealList />;
+    return (
+      <React.Fragment>
+        <Navigation />
+        <DealList />
+      </React.Fragment>
+    );
   }
 }
-
 
 export default Deals;

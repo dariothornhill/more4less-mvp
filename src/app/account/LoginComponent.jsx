@@ -1,6 +1,8 @@
 import React from "react";
 import { Label, Button, Input, Form, FormGroup, Col } from "reactstrap";
+
 import Message from "../components/Message";
+import Navigation from '../components/Navigation';
 
 class Login extends React.Component {
     constructor(props) {
@@ -36,9 +38,12 @@ class Login extends React.Component {
         const { error } = this.state;
         if (error !== "") {
             return (
-                <FormGroup>
-                    <Message msg={error} color="red" />
-                </FormGroup>
+                <div>
+                    <Navigation />
+                    <FormGroup>
+                        <Message msg={error} color="red" />
+                    </FormGroup>
+                </div>
             );
         }
     }

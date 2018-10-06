@@ -8,12 +8,13 @@ class DealList extends React.Component {
   render() {
     const { deals } = this.props;
 
-    const list = deals.map(x => (
-      <DealCard
-        key={x.id}
-        product={x.product}
+    const list = deals.map(deal => {
+     {console.log(deal)}
+      return <DealCard
+        key={deal.id}
+        product={deal.product}
       />
-    ));
+    ;});
 
     return <div className="row">{list}</div>;
   }
